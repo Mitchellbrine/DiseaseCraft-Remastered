@@ -1,0 +1,39 @@
+[
+	{
+		"id":"diseasecraft:insomnia",
+		"icon": "diseasecraft:no_sleep",
+		"rgb": [ 0.8, 0.8, 1.0 ],
+		"minDuration": 6000,
+		"maxDuration": 12000,
+		"incubation": [ 0, 1 ],
+		"baseImmunity": false,
+		"effects": [
+			"insomnia" 
+		],
+		"vectors": [ 
+			{ 
+				"type": "diseasecraft:time_since_rest",
+				"heap": 12000,
+				"weight": 1
+			},
+			{ 
+				"type": "diseasecraft:effect_added",
+				"heap": "minecraft:speed",
+				"weight": 15
+			}
+		],
+		"events": [ 
+			{ 
+				"trigger": "LEARN",
+				"events": [ 
+					[ 
+						"xp",
+						100,
+						"earn",
+						2
+					]
+				]
+			}
+		]
+	}
+]

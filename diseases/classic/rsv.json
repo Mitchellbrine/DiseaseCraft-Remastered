@@ -1,0 +1,56 @@
+[ 
+	{ 
+		"id": "diseasecraft:rsv",
+		"icon": "diseasecraft:virus_yellow",
+		"rgb": [ 1.0, 0.5, 0.0],
+		"minDuration": 6000,
+		"maxDuration": 24000,
+		"baseImmunity": false,
+		"effects": [ 
+			"cough",
+			"sneeze",
+			"out-of-breath",
+			"decreased-appetite",
+			"particulate-transmission",
+			"develop-pneumonia"
+		],
+		"vectors": [ 
+			{ 
+				"type": "diseasecraft:particulate_transmission",
+				"weight": 5
+			},
+			{ 
+				"type": "diseasecraft:entity_aabb",
+				"heap": "minecraft:cow",
+				"weight": 1
+			}
+		],
+		"variations": [
+			{ 
+				"type":"strength", 
+				"min":1,
+				"max":15,
+				"weight": 30
+			},
+			{
+				"type":"infection",
+				"min":1,
+				"max":20,
+				"weight": 20
+			}
+		],
+		"events": [ 
+			{ 
+				"trigger": "LEARN",
+				"events": [ 
+					[ 
+						"xp",
+						100,
+						"earn",
+						10
+					]
+				]
+			}
+		]
+	}
+]

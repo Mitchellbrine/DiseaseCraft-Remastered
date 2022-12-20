@@ -1,0 +1,65 @@
+[ 
+	{ 
+		"id":"diseasecraft:flu",
+		"icon": "diseasecraft:virus_blue",
+		"minDuration":12000,
+		"maxDuration":24000,
+		"baseImmunity":false,
+		"effects":[
+			"sneeze",
+			"cough",
+			"fatigue",
+			"vomit",
+			"develop-pneumonia"
+		],
+		"vectors": [
+			{ 
+				"type":"diseasecraft:entity_aabb",
+				"heap":"minecraft:pig",
+				"weight":3
+			},
+			{ 
+				"type":"diseasecraft:entity_aabb",
+				"heap":"minecraft:chicken",
+				"weight":1
+			},
+			{ 
+				"type": "diseasecraft:particulate_transmission",
+				"weight": 5
+			}
+		],
+		"variations": [
+			{ 
+				"type":"strength", 
+				"min":1,
+				"max":11,
+				"weight": 30
+			},
+			{
+				"type":"infection",
+				"min":1,
+				"max":18,
+				"weight": 20
+			}
+		],
+		"events": [ 
+			{ 
+				"trigger":"LEARN",
+				"events": [ 
+					[
+						"food",
+						80,
+						"exhaustion",
+						12.0
+					],
+					[ 
+						"xp",
+						100,
+						"earn",
+						10
+					]
+				]
+			}
+		]
+	}
+]
