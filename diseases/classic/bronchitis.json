@@ -1,0 +1,56 @@
+[ 
+	{ 
+		"id":"diseasecraft:bronchitis",
+		"icon":"diseasecraft:filling_lung",
+		"rgb": [ 1.0, 0.0, 0.5 ],
+		"minDuration":1200,
+		"maxDuration":4800,
+		"effects": [ 
+			"cough",
+			"seizure",
+			"particulate-transmission"
+		],
+		"vectors": [ 
+			{ 
+				"type": "diseasecraft:particulate-transmission",
+				"weight": 2
+			},
+			{ 
+				"type": "diseasecraft:use_item",
+				"heap": "minecraft:flint_and_steel",
+				"weight": 1
+			},
+			{ 
+				"type": "diseasecraft:smelt_item",
+				"weight": 1
+			}
+		],
+		"variations": [
+			{ 
+				"type":"strength", 
+				"min":1,
+				"max":7,
+				"weight": 30
+			},
+			{
+				"type":"infection",
+				"min":1,
+				"max":8,
+				"weight": 20
+			}
+		],
+		"events": [ 
+			{ 
+				"trigger": "LEARN",
+				"events": [ 
+					[ 
+						"xp",
+						100,
+						"earn",
+						8
+					]
+				]
+			}
+		]
+	}
+]

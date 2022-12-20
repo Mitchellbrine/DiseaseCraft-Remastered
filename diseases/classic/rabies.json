@@ -1,0 +1,63 @@
+[ 
+	{ 
+		"id": "diseasecraft:rabies",
+		"icon": "diseasecraft:broken_bone",
+		"minDuration":12000,
+		"maxDuration":24000,
+		"baseImmunity":false,
+		"effects": [ 
+			"hydrophobia",
+			"jitters",
+			"paranoia",
+			"sudden-death"
+		],
+		"vectors": [
+			{ 
+				"type": "diseasecraft:damage_mob",
+				"heap": "minecraft:wolf",
+				"weight": 4
+			},
+			{ 
+				"type": "diseasecraft:entity_aabb",
+				"heap": "minecraft:ocelot",
+				"weight":2
+			},
+			{ 
+				"type": "diseasecraft:entity_aabb",
+				"heap": "minecraft:cat",
+				"weight":2
+			},
+			{ 
+				"type": "diseasecraft:entity_aabb",
+				"heap": "minecraft:fox",
+				"weight": 3
+			},
+			{ 
+				"type": "diseasecraft:entity_aabb",
+				"heap": "minecraft:bat",
+				"weight":10
+			}
+		],
+		"variations": [
+			{ 
+				"type":"strength", 
+				"min":1,
+				"max":4,
+				"weight": 30
+			}
+		],
+		"events": [ 
+			{ 
+				"trigger": "LEARN",
+				"events": [ 
+					[ 
+						"xp",
+						100,
+						"earn",
+						15
+					]
+				]
+			}
+		]
+	}
+]

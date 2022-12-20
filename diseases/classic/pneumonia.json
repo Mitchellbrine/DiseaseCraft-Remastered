@@ -1,0 +1,57 @@
+[ 
+	{ 
+		"id":"diseasecraft:pneumonia",
+		"icon":"diseasecraft:full_lung",
+		"rgb": [ 0.2, 0.2, 1.0 ],
+		"minDuration": 2400,
+		"maxDuration": 5000,
+		"effects": [ 
+			"bad-cough",
+			"sudden-death"
+		],
+		"vectors": [ 
+			{ 
+				"type": "diseasecraft:develop_disease",
+				"heap": "diseasecraft:flu",
+				"weight": 2
+			},
+			{ 
+				"type": "diseasecraft:develop_disease",
+				"heap": "diseasecraft:rsv",
+				"weight": 1
+			},
+			{ 
+				"type": "diseasecraft:develop_disease",
+				"heap": "diseasecraft:cold",
+				"weight": 1
+			}
+		],
+		"variations": [
+			{ 
+				"type":"strength", 
+				"min":1,
+				"max":6,
+				"weight": 30
+			},
+			{
+				"type":"infection",
+				"min":1,
+				"max":3,
+				"weight": 20
+			}
+		],
+		"events": [ 
+			{ 
+				"trigger": "LEARN",
+				"events": [ 
+					[ 
+						"xp",
+						100,
+						"earn",
+						20
+					]
+				]
+			}
+		]
+	}
+]

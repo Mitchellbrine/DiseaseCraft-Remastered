@@ -1,0 +1,71 @@
+[ 
+	{
+		"id": "diseasecraft:yellow_fever",
+		"icon": "diseasecraft:yellow_mosquito",
+		"rgb": [ 1.0, 1.0, 0.3 ],
+		"minDuration":6000,
+		"maxDuration":12000,
+		"baseImmunity":false,
+		"effects": [
+			"fatigue",
+			"seizure",
+			"crazed-look",
+			"famished",
+			"sudden-death"
+		],
+		"vectors": [
+			{
+				"type": "diseasecraft:in_biome",
+				"heap": "minecraft:swamp",
+				"weight": 1
+			},
+			{
+				"type": "diseasecraft:in_biome",
+				"heap": "minecraft:swamp_hills",
+				"weight": 1
+			},
+			{
+				"type": "diseasecraft:in_biome",
+				"heap": "minecraft:jungle",
+				"weight": 1
+			},
+			{
+				"type": "diseasecraft:in_biome",
+				"heap": "minecraft:modified_jungle",
+				"weight": 1
+			},
+			{
+				"type": "diseasecraft:in_biome",
+				"heap": "minecraft:jungle_hills",
+				"weight": 1
+			}
+		],
+		"variations": [
+			{ 
+				"type":"strength", 
+				"min":1,
+				"max":9,
+				"weight": 30
+			},
+			{
+				"type":"infection",
+				"min":1,
+				"max":9,
+				"weight": 20
+			}
+		],
+		"events": [
+			{ 
+				"trigger": "LEARN",
+				"events": [ 
+					[ 
+						"xp",
+						100,
+						"earn",
+						20
+					]
+				]
+			}
+		]
+	}
+]

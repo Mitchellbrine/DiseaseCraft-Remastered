@@ -1,0 +1,67 @@
+[ 
+	{
+		"id": "diseasecraft:malaria",
+		"icon": "diseasecraft:green_mosquito",
+		"rgb": [ 0.8,1.0,0.8 ],
+		"minDuration":6000,
+		"maxDuration":12000,
+		"baseImmunity":false,
+		"effects": [
+			"fatigue",
+			"insomnia",
+			"crazed-look",
+			"sudden-death"
+		],
+		"vectors": [
+			{
+				"type": "diseasecraft:in_biome",
+				"heap": "minecraft:savanna",
+				"weight": 1
+			},
+			{
+				"type": "diseasecraft:in_biome",
+				"heap": "minecraft:shattered_plateau",
+				"weight": 1
+			},
+			{
+				"type": "diseasecraft:in_biome",
+				"heap": "minecraft:shatterted_savanna",
+				"weight": 1
+			},
+			{
+				"type": "diseasecraft:in_biome",
+				"heap": "minecraft:shatterted_savanna_plateau",
+				"weight": 1
+			},
+			{
+				"type": "diseasecraft:in_biome",
+				"heap": "minecraft:jungle",
+				"weight": 1
+			},
+			{
+				"type": "diseasecraft:in_biome",
+				"heap": "minecraft:modified_jungle",
+				"weight": 1
+			},
+			{
+				"type": "diseasecraft:in_biome",
+				"heap": "minecraft:jungle_hills",
+				"weight": 1
+			}
+		],
+		"variations": [
+			{ 
+				"type":"strength", 
+				"min":1,
+				"max":4,
+				"weight": 30
+			},
+			{
+				"type":"infection",
+				"min":1,
+				"max":6,
+				"weight": 20
+			}
+		]
+	}
+]
